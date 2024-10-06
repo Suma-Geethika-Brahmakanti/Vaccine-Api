@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const Slot = require('./models/Slot'); // Adjust the path based on your folder structure
+const Slot = require('./models/Slot'); 
 
 // Load environment variables from .env file
 dotenv.config();
