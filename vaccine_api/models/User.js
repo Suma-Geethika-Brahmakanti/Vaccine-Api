@@ -48,26 +48,3 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
-
-
-// Define schema for Vaccine registration
-// const vaccineSchema = new mongoose.Schema({
-//     name: {
-//         type: String,
-//         required: true,
-//     },
-//     age: {
-//         type: Number,
-//         required: true,
-//     },
-//     vaccineType: {
-//         type: String,
-//         required: true,
-//     },
-//     registrationDate: {
-//         type: Date,
-//         default: Date.now,
-//     },
-// });
-
-// module.exports = mongoose.model('Vaccine', vaccineSchema);
