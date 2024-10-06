@@ -24,7 +24,6 @@ app.use((req, res, next) => {
 });
 
 // MongoDB connection using Mongoose
-// MongoDB connection using Mongoose
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         console.log('Connected to MongoDB');
