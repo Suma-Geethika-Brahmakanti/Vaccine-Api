@@ -14,14 +14,14 @@ const app = express();
 // Middleware to parse JSON data in request bodies
 app.use(express.json());
 
-// Use the admin routes
-const adminRoutes = require('./routes/adminRoutes');
-app.use('/admin', adminRoutes);
+// // Use the admin routes
+// const adminRoutes = require('./routes/adminRoutes');
+// app.use('/admin', adminRoutes);
 
-// Add error handling middleware (optional)
-app.use((req, res, next) => {
-    res.status(404).json({ message: 'Route not found' });
-});
+// // Add error handling middleware (optional)
+// app.use((req, res, next) => {
+//     res.status(404).json({ message: 'Route not found' });
+// });
 
 // MongoDB connection using Mongoose
 mongoose.connect(process.env.MONGO_URI)
@@ -54,6 +54,6 @@ app.use('/api/users', userRoutes);
 const vaccineRoutes = require('./routes/vaccineRoutes');
 app.use('/api/vaccines', vaccineRoutes);   // Vaccine routes (slots, register slot)
 
-// const adminRoutes = require('./routes/adminRoutes');
-// app.use('/admin', adminRoutes);
+const adminRoutes = require('./routes/adminRoutes');
+app.use('/admin', adminRoutes);
 
